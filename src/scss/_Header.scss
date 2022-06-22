@@ -1,10 +1,9 @@
 .header_navigation{
   padding-top: 37px;
-  margin-right: 142px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 17px;
+
 
   a {
     text-decoration: none;
@@ -16,7 +15,8 @@
 
 .header_navigation_account{
   display: flex;
-  gap: 10px;
+  margin-bottom: 17px;
+
 
 
   a{
@@ -24,6 +24,7 @@
     color: $accountLinkTekstColor;
     padding: 9px 10px;
     border: 1px solid white;
+    margin-left: 10px;
 
 
     &:hover{
@@ -37,17 +38,18 @@
 .header_navigation_anchor{
 
   display: flex;
-  gap: 15px;
+  justify-content: space-between;
 
 
   a{
-    font-size: 18px;
-    color: $menuLinkTekstColor;
+    font: normal normal normal 18px/24px Open Sans;
+    letter-spacing: 0px;
+    color: $basicColor;
     padding: 9px 20px;
     border: 1px solid white;
 
     &:hover{
-      border: 1px solid $menuLinkTekstColor;
+      border: 1px solid $basicColor;
     }
   }
 

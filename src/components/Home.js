@@ -13,7 +13,7 @@ import {Footer} from "./Footer";
 export function Home() {
 
     return <>
-        <Header/>
+        {/*<Header/>*/}
         <MainSection />
         <ThreeColumns />
         <FourSteps />
