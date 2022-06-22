@@ -1,0 +1,61 @@
+.four_steps_container{
+  display: flex;
+  flex-direction: column;
+}
+
+.four_steps_container_header {
+text-align: center;
+  padding-top: 55px;
+  padding-bottom: 34px;
+
+  .four_steps_container_title{
+    font: normal normal normal 38px/55px Open Sans;
+    letter-spacing: -0.76px;
+    color: $basicColor;
+    padding-bottom: 25px;
+  }
+
+}
+
+.four_steps_container_main{
+  display: flex;
+  justify-content: space-between;
+  background-color: $greyBackGround;
+  padding: 70px 214px 70px 214px;
+
+
+
+  .step_container{
+    width: 145px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    img{
+
+    }
+  }
+}
+
+.four_steps_container_footer{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 80px;
+  padding-top: 35px;
+
+
+  .four_steps_container_footer_link{
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 124px;
+    text-align: center;
+    font: normal normal 300 36px/45px Open Sans;
+    letter-spacing: 0px;
+    color: $basicColor;
+    padding: 13px 93px;
+    border: 1px solid $basicColor;
+  }
+
+
+}

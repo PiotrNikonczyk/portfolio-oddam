@@ -1,7 +1,7 @@
 import React from "react";
 import {Header} from "./Header";
 import imageSvg from '../assets/Decoration.svg'
-import image from '../assets/Home-Hero-Image.jpg'
+
 
 
 export function MainSection() {
