@@ -1,4 +1,6 @@
 import React from "react";
+import {BrowserRouter as Router, Link as LinkRD} from "react-router-dom";
+
 import imageSvg from '../assets/Decoration.svg'
 import shirtSvg from '../assets/Icon-1.svg'
 import bagSvg from '../assets/Icon-2.svg'
@@ -9,7 +11,7 @@ import deliverySvg from '../assets/Icon-4.svg'
 export function FourSteps() {
 
     return <>
-        <div className={"four_steps"}>
+        <div className={"four_steps"} id={"fourSteps"}>
             <div className={"four_steps_container"}>
                 <div className={"four_steps_container_header"}>
                     <h2 className={"four_steps_container_title"}>Wystarczą 4 proste kroki</h2>
@@ -37,9 +39,10 @@ export function FourSteps() {
                         <p className={"steps_instruction"}>kurier podjedzie w dogodnym terminie</p>
                     </div>
                 </div>
-                <div className={"four_steps_container_footer"} >
-                    <a href={"#"} className={"four_steps_container_footer_link"}>Oddaj rzeczy</a>
-
+                <div className={"four_steps_container_footer"}>
+                    <Router>
+                        <LinkRD to={"/logowanie"} className={"four_steps_container_footer_link"}>Oddaj rzeczy</LinkRD>
+                    </Router>
                 </div>
 
             </div>

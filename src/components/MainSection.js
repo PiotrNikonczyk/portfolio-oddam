@@ -1,7 +1,7 @@
 import React from "react";
 import {Header} from "./Header";
 import imageSvg from '../assets/Decoration.svg'
-
+import {BrowserRouter as Router, Link as LinkRD} from "react-router-dom";
 
 
 export function MainSection() {
@@ -15,8 +15,10 @@ export function MainSection() {
                     <h1>Oddaj niechciane rzeczy w zaufane ręce</h1>
                     <img src={imageSvg} alt={"element dekoracyjny"}/>
                     <div className={"main_section_container_links"}>
-                        <a href={"#"} className={"main_section_container_link"}>Oddaj rzeczy</a>
-                        <a href={"#"} className={"main_section_container_link"}>Zorganizuj zbiórkę</a>
+                        <Router>
+                            <LinkRD to={"/logowanie"} className={"main_section_container_link"}>Oddaj rzeczy</LinkRD>
+                            <LinkRD to={"/logowanie"} className={"main_section_container_link"}>Zorganizuj zbiórkę</LinkRD>
+                        </Router>
                     </div>
                 </div>
             </div>

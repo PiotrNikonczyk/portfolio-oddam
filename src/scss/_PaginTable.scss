@@ -1,0 +1,62 @@
+.pagin_table{
+  min-height: 344px;
+  min-width: 1344px;
+}
+
+table{
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.row1, .row2{
+
+  position: relative;
+
+  &::after{
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+  }
+}
+
+.table_row{
+  padding-bottom: 31px;
+  padding-right: 22px;
+}
+
+td{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+
+
+.foundation_name{
+  text-align: left;
+  font: normal normal 300 26px $font-alt;
+  letter-spacing: 0px;
+  color: $basicColor;
+}
+
+.purpose_foundation{
+  padding-top: 15px;
+  text-align: left;
+  font: italic normal 300 18px $font-alt;
+  letter-spacing: 0px;
+  color: $basicColor;
+}
+
+.second_column{
+  ext-align: left;
+  font: normal normal 300 18px $font-alt;
+  letter-spacing: 0px;
+  color: $basicColor;
+}

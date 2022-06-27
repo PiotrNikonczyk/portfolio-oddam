@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
+import {Link} from 'react-scroll'
+import { BrowserRouter as Router, Link as LinkRD } from "react-router-dom";
 
 
 export function Header() {
@@ -8,15 +8,18 @@ export function Header() {
     return <>
         <div className={"header_navigation"}>
             <div className={"header_navigation_account"}>
-                <a href={"#"} className={"header_navigation_account_link"}>Zaloguj</a>
-                <a href={"#"} className={"header_navigation_account_link"}>Załóż konto</a>
+                <Router>
+                    <LinkRD to={"/logowanie"} className={"header_navigation_account_link"}>Zaloguj</LinkRD>
+                    <LinkRD to={"/rejestracja"} className={"header_navigation_account_link"}>Załóż konto</LinkRD>
+                </Router>
             </div>
             <div className={"header_navigation_anchor"}>
-                <a href={"#"} className={"header_navigation_anchor_link"}>Start</a>
-                <a href={"#"} className={"header_navigation_anchor_link"}>O co chodzi?</a>
-                <a href={"#"} className={"header_navigation_anchor_link"}>O nas</a>
-                <a href={"#"} className={"header_navigation_anchor_link"}>Fundacja i organizacje</a>
-                <a href={"#"} className={"header_navigation_anchor_link"}>Kontakt</a>
+                <Link className={"link"} ctiveClass="active" to="aboutUs" spy={true} smooth={true}>Start</Link>
+                <Link className={"link"} ctiveClass="active" to="fourSteps" spy={true} smooth={true}>O co chodzi?</Link>
+                <Link className={"link"} ctiveClass="active" to="aboutUs" spy={true} smooth={true}>O nas</Link>
+                <Link className={"link"} ctiveClass="active" to="aboutUs" spy={true} smooth={true}>Fundacja i
+                    organizacje</Link>
+                <Link className={"link"} ctiveClass="active" to="aboutUs" spy={true} smooth={true}>Kontakt</Link>
 
             </div>
         </div>

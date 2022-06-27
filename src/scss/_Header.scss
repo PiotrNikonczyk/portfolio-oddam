@@ -5,7 +5,7 @@
   align-items: flex-end;
 
 
-  a {
+   .header_navigation_account_link{
     text-decoration: none;
 
   }
@@ -41,7 +41,7 @@
   justify-content: space-between;
 
 
-  a{
+  .link{
     font: normal normal normal 18px/24px Open Sans;
     letter-spacing: 0px;
     color: $basicColor;
