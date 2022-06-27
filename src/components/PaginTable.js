@@ -13,9 +13,9 @@ export function PaginTable({data}){
 
                     <td className={"first_column "}>
                         <div className={"foundation_name"}>{event[0]}</div>
-                        <div className={"purpose_foundation"}>{event[2]}</div>
+                        <div className={"purpose_foundation"}>{event[1]}</div>
                     </td>
-                    <td className={"second_column"}>{event[1]}</td>
+                    <td className={"second_column"}>{event[2]}</td>
                 </tr>)
 
             })

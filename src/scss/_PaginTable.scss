@@ -1,6 +1,6 @@
 .pagin_table{
-  min-height: 344px;
-  min-width: 1344px;
+  min-height: 374px;
+  min-width: 70%;
 }
 
 table{
@@ -30,9 +30,15 @@ table{
   padding-right: 22px;
 }
 
-td{
+tr{
   display: flex;
   justify-content: space-between;
+}
+
+td{
+  display: flex;
+  flex-direction: column;
+
 }
 
 
