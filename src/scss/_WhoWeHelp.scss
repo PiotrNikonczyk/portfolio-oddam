@@ -5,6 +5,19 @@
   flex-direction: column;
   align-items: center;
 
+
+  .wwh_title {
+    font: normal normal normal 38px/55px $font-base;
+    letter-spacing: -0.76px;
+    color: $basicColor;
+  }
+
+  .wwh_img_decor{
+    margin-top: 25px;
+    margin-bottom: 50px;
+  }
+
+
   .wwh_links{
     display: flex;
     gap: 65px;

@@ -16,7 +16,7 @@ export function MainSection() {
                     <img src={imageSvg} alt={"element dekoracyjny"}/>
                     <div className={"main_section_container_links"}>
                         <Router>
-                            <LinkRD to={"/logowanie"} className={"main_section_container_link"}>Oddaj rzeczy</LinkRD>
+                            <LinkRD to={"/logowanie"} className={"main_section_container_link main_section_container_link_left"}>Oddaj rzeczy</LinkRD>
                             <LinkRD to={"/logowanie"} className={"main_section_container_link"}>Zorganizuj zbiórkę</LinkRD>
                         </Router>
                     </div>

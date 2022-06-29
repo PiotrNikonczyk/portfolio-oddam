@@ -16,7 +16,7 @@ export function Contact() {
             <div className={"contact_container_form"}>
                 <div className={"contact_container_form_container"}>
                     <h2 className={"contact_title"}>Skontaktuj się z nami</h2>
-                    <img src={image} alt={"obrazek dekoracyjny"}/>
+                    <img className={"img_decor"} src={image} alt={"obrazek dekoracyjny"}/>
 
                     <form className={"contact_form"} onSubmit={handleSubmit}>
                         <div className={"contact_form_data"}>
@@ -34,11 +34,11 @@ export function Contact() {
 
                         <div className={"contact_form_text contact_form_data_container"}>
                             <label className={"label_text"}>Wpisz swoją wiadomość</label>
-                            <input type={"text"} className={"input_text"} placeholder={"Zacznij pisać tutaj"}/>
+                            <textarea type={"text"} className={"input_text"} placeholder={"Zacznij pisać tutaj"}/>
                         </div>
 
                         <div className={"contact_form_button"}>
-                            <button type="submit">WYŚLIJ</button>
+                            <button className={"button_submit"} type="submit">WYŚLIJ</button>
                         </div>
 
 

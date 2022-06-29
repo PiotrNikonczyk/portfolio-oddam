@@ -44,20 +44,25 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    gap: 44px;
+
 
   }
 
 }
 
 .main_section_container_link{
+
+  width: 45%;
+  height: 120px;
   text-decoration: none;
   text-transform: uppercase;
-  width: 124px;
-  text-align: center;
-  font: normal normal 300 36px/45px Open Sans;
-  letter-spacing: 0px;
+  font: normal normal 300 36px $font-base;
   color: $basicColor;
-  padding: 13px 93px;
   border: 1px solid $basicColor;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
+
+

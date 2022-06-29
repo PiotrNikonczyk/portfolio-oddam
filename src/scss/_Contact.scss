@@ -1,21 +1,28 @@
 .contact_container{
+  position: relative;
   width: 100%;
 
-
-
-
-
-
-
-
-
-
-
+    &::before{
+      content: ' ';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.3;
+      background-image: url('../assets/Background-Contact-Form.jpg');
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      background-size: cover;
+    }
 
   input{
     border: none;
     outline: none;
     position:relative;
+    background: none;
+
 
 
     &::after{
@@ -28,20 +35,26 @@
       bottom: 0;
 
     }
-
   }
 
+  .contact_title {
 
+    font: normal normal normal 38px/55px $font-base;
+    letter-spacing: -0.76px;
+    color: $basicColor;
+  }
 
+  .img_decor {
+    margin: 25px 0px 70px 0px;
 
-
+  }
 
 }
 
 .contact_container_form {
   display: flex;
   justify-content: flex-end;
-  margin-right: 142px;
+  padding: 200px 142px 270px 0px;
 
 }
 
@@ -50,17 +63,6 @@
   flex-direction: column;
   align-items: center;
 
-  .contact_title {
-    text-align: center;
-    font: normal normal normal 38px/55px $font-base;
-    letter-spacing: -0.76px;
-    color: $basicColor;
-  }
-
-  img {
-    margin: 25px 0px 70px 0px;
-
-  }
 
   .contact_form{
 
@@ -70,6 +72,16 @@
       color: $basicColor;
     }
 
+    input{
+      font: normal normal normal 18px/24px $font-base;
+      letter-spacing: 0px;
+      color: $basicColor;
+      width: 100%;
+      margin-top: 12px;
+      margin-bottom: 4px;
+    }
+
+
 
 
   }
@@ -77,6 +89,10 @@
   .contact_form_data{
     display: flex;
     gap: 16px;
+
+    .input_data{
+      height: 24px;
+    }
 
   }
 
@@ -86,10 +102,65 @@
   display: flex;
   flex-direction: column;
   width: 256px;
+  position: relative;
+
+
+  &::after{
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: $basicColor;
+    position: absolute;
+    bottom: 0px;
+  }
+
+
 
 
 }
 
+.contact_form_text {
+
+  width: 100%;
+
+  .label_text{
+    margin-top: 40px;
+  }
+
+  .input_text{
+    height: 97px;
+  }
+
+  textarea{
+    background: none;
+    outline: none;
+    resize: none;
+    border: none;
+    font: normal normal normal 18px/24px $font-base;
+    letter-spacing: 0px;
+    color: $basicColor;
+  }
+
+}
+
+.contact_form_button{
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-end;
+
+  .button_submit{
+
+    font: normal normal 300 18px/24px Open Sans;
+    letter-spacing: 0px;
+    color: black;
+    padding: 13px 52px;
+    background: none;
+  }
+
+
+}
 
 
 

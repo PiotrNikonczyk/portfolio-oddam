@@ -67,7 +67,7 @@ export function  WhoWeHelp(){
     return <>
         <div className={"who_we_help_container"}>
             <h2 className={"wwh_title"}>Komu pomagamy?</h2>
-            <img src={imageSvg} alt={"element dekoracyjny"}/>
+            <img  className={"wwh_img_decor"} src={imageSvg} alt={"element dekoracyjny"}/>
             <div className={"wwh_links"}>
                 <a className={"choose_who"} onClick={() => showCollection(foundation,foundDesc ) }>Fundacjom</a>
                 <a className={"choose_who"} onClick={() => showCollection(organizations, orgDesc) }>Organizacjom pozarządowym</a>
