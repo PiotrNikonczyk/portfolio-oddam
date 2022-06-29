@@ -8,17 +8,30 @@ export function PaginationNav({infoPerPage, totalInfo, paginate}) {
 
     }
 
-    return (
-        <nav>
-            <ul>
-                {pageNumber.map( number => (
-                    <li key={number}>
-                        <a onClick={() => paginate(number)}>{number}</a>
+    if(pageNumber.length>1) {
+        return (
+            <nav id={"pagination_nav"}>
+                <ul>
+                    {pageNumber.map(number => (
+                        <li key={number}>
+                            <a onClick={() => paginate(number)}>{number}</a>
+                        </li>
+                    ))}
+                </ul>
+            </nav>
+        )
+    }
+    else{
+        return (
+            <nav id={"pagination_nav"}>
+                <ul>
+                    <li>
+                        <a ></a>
                     </li>
-                ))}
-            </ul>
-        </nav>
-    )
+                </ul>
+            </nav>
+        )
+    }
 
 
 }

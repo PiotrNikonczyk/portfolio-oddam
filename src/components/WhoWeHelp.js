@@ -63,9 +63,8 @@ export function  WhoWeHelp(){
 
 
 
-
     return <>
-        <div className={"who_we_help_container"}>
+        <div className={"who_we_help_container"} id={"who_we_help"}>
             <h2 className={"wwh_title"}>Komu pomagamy?</h2>
             <img  className={"wwh_img_decor"} src={imageSvg} alt={"element dekoracyjny"}/>
             <div className={"wwh_links"}>
@@ -77,6 +76,7 @@ export function  WhoWeHelp(){
                 <p className={"who_we_help_description"}> {description} </p>
             </div>
             <PaginTable data={currentInfo}/>
+
             <PaginationNav infoPerPage={infoPerPage}  totalInfo={infoToShow.length} paginate={paginate} />
 
 

@@ -37,6 +37,10 @@
     }
   }
 
+
+
+
+
   .contact_title {
 
     font: normal normal normal 38px/55px $font-base;
@@ -45,9 +49,18 @@
   }
 
   .img_decor {
-    margin: 25px 0px 70px 0px;
-
+    margin-top: 25px
   }
+
+  .send_message_ok{
+    font: normal normal 600 16px/22px $font-base;
+    color: green;
+    margin-top: 13px;
+    margin-bottom: 13px;
+    opacity: 0;
+  }
+
+
 
 }
 
@@ -93,8 +106,24 @@
     .input_data{
       height: 24px;
     }
-
   }
+
+
+  .errorInfo{
+    font-weight: bold;
+    display: block;
+    position: absolute;
+    margin-top: 20px;
+    color: red;
+    opacity: 0;
+  }
+
+  .contact_form_data_container_errorInfo{
+    margin-top: 75px;
+  }
+
+
+
 
 }
 
@@ -128,7 +157,7 @@
     margin-top: 40px;
   }
 
-  .input_text{
+  .textarea_text{
     height: 97px;
   }
 
@@ -157,10 +186,11 @@
     color: black;
     padding: 13px 52px;
     background: none;
+    z-index: 4;
   }
 
-
 }
+
 
 
 

@@ -40,9 +40,9 @@ export function FourSteps() {
                     </div>
                 </div>
                 <div className={"four_steps_container_footer"}>
-                    <Router>
+                    
                         <LinkRD to={"/logowanie"} className={"four_steps_container_footer_link"}>Oddaj rzeczy</LinkRD>
-                    </Router>
+
                 </div>
 
             </div>
