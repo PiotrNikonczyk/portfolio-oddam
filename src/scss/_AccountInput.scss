@@ -1,6 +1,6 @@
 .account_input_container{
   display: flex;
-  gap: 31px;
+
   flex-direction: column;
   padding: 40px 68px;
 
@@ -40,4 +40,19 @@
 
   }
 
+}
+
+
+.email_error, {
+  margin-bottom: 31px;
+}
+
+.account_single_input_container_password_bis{
+  margin-top: 31px;
+}
+
+.password_error, .email_error, .password_bis_error{
+  color: red;
+  font-weight: bold;
+  opacity: 0;
 }

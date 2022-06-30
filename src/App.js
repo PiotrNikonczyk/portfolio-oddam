@@ -1,5 +1,6 @@
 import {Home} from "./components/Home";
 import {Login} from "./components/Login";
+import {Register} from "./components/Register";
 
 import {
     BrowserRouter,
@@ -13,6 +14,7 @@ export function App() {
             <Routes>
                 <Route path="" element={<Home />} />
                 <Route path="/logowanie" element={<Login/>}/>
+                <Route path="/rejestracja" element={<Register/>}/>
             </Routes>
         </BrowserRouter>
     )

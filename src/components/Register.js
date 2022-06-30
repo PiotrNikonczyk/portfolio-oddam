@@ -3,13 +3,13 @@ import {Header} from "./Header";
 import {LoginSection} from "./LoginSection";
 import {Footer} from "./Footer";
 
-export function Login(){
+export function Register(){
 
 
 
     return <>
         <Header />
-        <LoginSection register={false}/>
+        <LoginSection register={true}/>
         <Footer />
 
     </>

@@ -1,12 +1,21 @@
 import React from "react";
 import {AccountInput} from "./AccountInput";
+import {LoginRegisterLinks} from "./LoginRegisterLinks";
 import imageSvg from '../assets/Decoration.svg'
 
-import {BrowserRouter as Router, Link as LinkRD} from "react-router-dom";
-import {Link} from "react-scroll";
+import {  Link as LinkRD } from "react-router-dom";
 
 
-export function LoginSection() {
+
+export function LoginSection({register}) {
+
+
+
+
+
+
+
+
 
 
     return <>
@@ -15,13 +24,8 @@ export function LoginSection() {
 
                 <h1 className={"login_title"}>Zaloguj się</h1>
                 <img className={"img_decor"} src={imageSvg} alt={"element dekoracyjny"}/>
-                <AccountInput/>
-                <div className={"login_Link_container"}>
-                    <Link className={"link"} ctiveClass="active" to="main_section" spy={true} smooth={true}>Załóż
-                        konto</Link>
-                    <Link className={"link"} ctiveClass="active" to="main_section" spy={true} smooth={true}>Zaloguj
-                        się</Link>
-                </div>
+                <AccountInput register={register} />
+                <LoginRegisterLinks register={register} />
             </div>
         </div>
     </>
