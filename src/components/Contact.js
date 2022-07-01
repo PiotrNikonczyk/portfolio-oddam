@@ -28,8 +28,7 @@ export function Contact() {
                 formErrors.push("Nie podałeś imienia")
             }
 
-        }
-        else{
+        } else {
             errorName.style.opacity = 0;
         }
 
@@ -38,8 +37,7 @@ export function Contact() {
         if (!reg.test(inputEmail.value)) {
             formErrors.push("Wypełnij poprawnie pole z email");
             errorMail.style.opacity = 1;
-        }
-        else{
+        } else {
             errorMail.style.opacity = 0;
         }
 
@@ -47,8 +45,7 @@ export function Contact() {
         if (message.value.length < 120) {
             formErrors.push("Podałeś za krótką wiadomość. Powinna mieć ona conajmniej 120 znaków");
             errorText.style.opacity = 1;
-        }
-        else{
+        } else {
             errorText.style.opacity = 0;
         }
 
@@ -69,9 +66,21 @@ export function Contact() {
                     }
                 }
             ).then(resp => {
-                console.log(resp);
-                document.querySelector(".send_message_ok").style.opacity = "1";
-            }).catch(err => {
+                if (resp.status === 200) {
+
+                    document.querySelector(".send_message_ok").style.opacity = "1";
+
+                }else{
+
+                    document.querySelector(".send_message_ok").style.opacity = "0";
+
+                }
+                return resp.json();
+            }).then( data =>{
+                console.log(data.errors);
+                }
+
+            ).catch(err => {
                 console.log('Błąd!', err);
             });
         } else {
@@ -100,20 +109,19 @@ export function Contact() {
                                 <label className={"label_data user_name"}>Wpisz swoje imię</label>
                                 <input type={"text"} className={"input_data input_name"}
                                        placeholder={"Zacznij pisać tutaj"}/>
-                                <p className={"errorInfo errorInfo_name contact_form_data_container_errorInfo"}>podane imie jest nieprawidłowe!</p>
+                                <p className={"errorInfo errorInfo_name contact_form_data_container_errorInfo"}>podane
+                                    imie jest nieprawidłowe!</p>
                             </div>
                             <div className={"contact_form_data_mail contact_form_data_container"}>
                                 <label className={"label_data user_mail"}>Wpisz swój email</label>
                                 <input type={"text"} className={"input_data input_mail"}
                                        placeholder={"Zacznij pisać tutaj"}/>
-                                <p className={"errorInfo errorInfo_mail contact_form_data_container_errorInfo"}>podane email jest nieprawidłowy!</p>
+                                <p className={"errorInfo errorInfo_mail contact_form_data_container_errorInfo"}>podane
+                                    email jest nieprawidłowy!</p>
                             </div>
 
 
                         </div>
-
-
-
 
 
                         <div className={"contact_form_text contact_form_data_container"}>
