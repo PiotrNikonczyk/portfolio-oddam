@@ -20,20 +20,17 @@ export function Contact() {
         let formErrors = [];
 
         //name checking
-        if (inputName.value.split(' ').length !== 1 || inputName.value.length === 0) {
+        const regName = /^[a-zA-Z ]+$/;
+        if (!regName.test(inputName.value)) {
             errorName.style.opacity = 1;
-            if (inputName.value.split(' ').length > 1) {
-                formErrors.push("Podałeś więcej słów niż jedno w polu imię")
-            } else {
-                formErrors.push("Nie podałeś imienia")
-            }
+             formErrors.push("Podałeś błędne imię")
 
         } else {
             errorName.style.opacity = 0;
         }
 
         //mail checking
-        const reg = /^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$/;
+        const reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         if (!reg.test(inputEmail.value)) {
             formErrors.push("Wypełnij poprawnie pole z email");
             errorMail.style.opacity = 1;

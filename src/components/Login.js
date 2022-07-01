@@ -8,6 +8,7 @@ export function Login(){
 
 
     return <>
+
         <Header />
         <LoginSection register={false}/>
         <Footer />
