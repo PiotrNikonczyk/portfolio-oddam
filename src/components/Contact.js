@@ -74,7 +74,7 @@ export function Contact() {
                 }
                 return resp.json();
             }).then( data =>{
-                console.log(data.errors);
+                console.log(data.status);  //status can be success or error
                 }
 
             ).catch(err => {
