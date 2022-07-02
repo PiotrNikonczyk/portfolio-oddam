@@ -3,19 +3,10 @@ import {AccountInput} from "./AccountInput";
 import {LoginRegisterLinks} from "./LoginRegisterLinks";
 import imageSvg from '../assets/Decoration.svg'
 
-import {  Link as LinkRD } from "react-router-dom";
 
 
 
 export function LoginSection({register}) {
-
-
-
-
-
-
-
-
 
 
     return <>

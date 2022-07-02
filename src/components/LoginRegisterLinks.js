@@ -1,5 +1,6 @@
 import React from "react";
 import {Link as LinkRD} from "react-router-dom";
+import {registerNewUser} from "../firebase/firebase";
 
 export function LoginRegisterLinks({register}){
 
@@ -38,6 +39,8 @@ export function LoginRegisterLinks({register}){
             redyToRegister++;
         }
 
+
+        // jeśli następuje rejestracja
         if(register) {
             const passwordBis = document.querySelector(".input_user_password_bis").value;
             if (password !== passwordBis) {
@@ -50,7 +53,8 @@ export function LoginRegisterLinks({register}){
         }
 
         if(redyToRegister === 3){
-            console.log("zakładamy konto");
+            registerNewUser(email,password);
+        console.log("konto założone dla ", email);
         }
 
 

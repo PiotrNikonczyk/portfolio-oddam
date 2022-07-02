@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useState} from "react";
 import {PaginTable} from "./PaginTable";
 import imageSvg from '../assets/Decoration.svg'
 import {PaginationNav} from "./PaginationNav";
@@ -23,7 +23,7 @@ export function  WhoWeHelp(){
     const [infoToShow, setInfoToShow] = useState( foundation);
     const [description, setDescription] = useState(foundDesc)
     const [currentPage, setCurrentPage] = useState(1);
-    const [infoPerPage, setInfoPerPage] = useState(3);
+    const infoPerPage = 3;
 
     const organizations = [
         ["Organizacja “Lorem Ipsum 1”","Quis varius quam quisque id diam vel quam elementum pulvinar.","Egestas, sed, tempus"],

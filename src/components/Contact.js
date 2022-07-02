@@ -1,6 +1,7 @@
 import React from "react";
 import {Footer} from "./Footer";
 import image from '../assets/Decoration.svg'
+import {initializeApp} from "firebase/app";
 
 
 export function Contact() {
@@ -84,6 +85,9 @@ export function Contact() {
             console.error(formErrors);
             document.querySelector(".send_message_ok").style.opacity = "0";
         }
+
+
+
 
     }
 
