@@ -1,8 +1,9 @@
 import React from "react";
 import {Link as LinkRD} from "react-router-dom";
 import {registerNewUser} from "../firebase/firebase";
+import {signIn} from "../firebase/firebase";
 
-export function LoginRegisterLinks({register}){
+export function LoginRegisterLinks({register, setLoggedUser}){
 
     function handleClick(e){
 
@@ -52,11 +53,16 @@ export function LoginRegisterLinks({register}){
             }
         }
 
-        if(redyToRegister === 3){
+        if(redyToRegister === 3 && register){
             registerNewUser(email,password);
         console.log("konto założone dla ", email);
         }
 
+        if(!register && redyToRegister === 2){
+            console.log("staram się zalogować");
+            signIn(email, password, setLoggedUser);
+
+        }
 
 
 

@@ -9,6 +9,8 @@
    .header_navigation_account_link{
     text-decoration: none;
 
+
+
   }
 }
 
@@ -16,6 +18,7 @@
 
 .header_navigation_account{
   display: flex;
+  align-items: center;
   margin-bottom: 17px;
 
 
@@ -32,6 +35,12 @@
       border: 1px solid $yellowBorderColor;
     }
 
+  }
+
+  .user_hello{
+    font: normal normal normal 14px $font-base;
+    letter-spacing: 0px;
+    color: black;
   }
 
 }

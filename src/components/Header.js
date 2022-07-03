@@ -1,18 +1,15 @@
 import React from "react";
 import {Link} from 'react-scroll'
 import {  Link as LinkRD } from "react-router-dom";
+import {HeaderTopLinks} from "./HeaderTopLinks";
 
 
-export function Header() {
+export function Header({user}) {
 
     return <>
         <div className={"header_navigation"}>
-            <div className={"header_navigation_account"}>
+           <HeaderTopLinks user={user}/>
 
-                    <LinkRD to={"/logowanie"} className={"header_navigation_account_link"}>Zaloguj</LinkRD>
-                    <LinkRD to={"/rejestracja"} className={"header_navigation_account_link"}>Załóż konto</LinkRD>
-
-            </div>
             <div className={"header_navigation_anchor"}>
                 <LinkRD className={"link link_start"} to={"/"} >Start</LinkRD>
                 <Link className={"link"} activeClass="active" to="fourSteps" spy={true} smooth={true}>O co chodzi?</Link>

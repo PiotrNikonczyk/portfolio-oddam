@@ -8,10 +8,10 @@ import {Contact} from "./Contact";
 
 
 
-export function Home() {
+export function Home({user}) {
 
     return <>
-        <MainSection />
+        <MainSection user={user}/>
         <ThreeColumns />
         <FourSteps />
         <AboutUs />

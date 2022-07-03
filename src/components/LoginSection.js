@@ -6,7 +6,7 @@ import imageSvg from '../assets/Decoration.svg'
 
 
 
-export function LoginSection({register}) {
+export function LoginSection({register, setLoggedUser}) {
 
 
     return <>
@@ -16,7 +16,7 @@ export function LoginSection({register}) {
                 <h1 className={"login_title"}>Zaloguj się</h1>
                 <img className={"img_decor"} src={imageSvg} alt={"element dekoracyjny"}/>
                 <AccountInput register={register} />
-                <LoginRegisterLinks register={register} />
+                <LoginRegisterLinks register={register} setLoggedUser={setLoggedUser}/>
             </div>
         </div>
     </>
