@@ -4,11 +4,11 @@ import {  Link as LinkRD } from "react-router-dom";
 import {HeaderTopLinks} from "./HeaderTopLinks";
 
 
-export function Header({user}) {
+export function Header({user, setLoggedUser}) {
 
     return <>
         <div className={"header_navigation"}>
-           <HeaderTopLinks user={user}/>
+           <HeaderTopLinks user={user} setLoggedUser={setLoggedUser}/>
 
             <div className={"header_navigation_anchor"}>
                 <LinkRD className={"link link_start"} to={"/"} >Start</LinkRD>

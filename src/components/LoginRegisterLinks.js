@@ -3,13 +3,13 @@ import {Link as LinkRD} from "react-router-dom";
 import {registerNewUser} from "../firebase/firebase";
 import {signIn} from "../firebase/firebase";
 
-export function LoginRegisterLinks({register, setLoggedUser}){
+export function LoginRegisterLinks({register, setLoggedUser}) {
 
-    function handleClick(e){
+    function handleClick(e) {
 
 
-        if((e.target.classList.contains("link_register") && !register) || (e.target.classList.contains("link_login") && register) ){
-            return ;
+        if ((e.target.classList.contains("link_register") && !register) || (e.target.classList.contains("link_login") && register)) {
+            return;
         }
 
         let redyToRegister = 0;
@@ -23,26 +23,24 @@ export function LoginRegisterLinks({register, setLoggedUser}){
             document.querySelector(".email_error").style.opacity = "1";
             e.preventDefault();
 
-        }
-        else{
+        } else {
             document.querySelector(".email_error").style.opacity = "0";
             redyToRegister++;
         }
 
 
-        if (password.length < 6){
+        if (password.length < 6) {
             document.querySelector(".password_error").style.opacity = "1";
             e.preventDefault();
 
-        }
-        else{
+        } else {
             document.querySelector(".password_error").style.opacity = "0";
             redyToRegister++;
         }
 
 
         // jeśli następuje rejestracja
-        if(register) {
+        if (register) {
             const passwordBis = document.querySelector(".input_user_password_bis").value;
             if (password !== passwordBis) {
                 document.querySelector(".password_bis_error").style.opacity = "1";
@@ -53,44 +51,41 @@ export function LoginRegisterLinks({register, setLoggedUser}){
             }
         }
 
-        if(redyToRegister === 3 && register){
-            registerNewUser(email,password);
-        console.log("konto założone dla ", email);
+        if (redyToRegister === 3 && register) {
+            registerNewUser(email, password, setLoggedUser);
+            console.log("konto założone dla ", email);
         }
 
-        if(!register && redyToRegister === 2){
+        if (!register && redyToRegister === 2) {
             console.log("staram się zalogować");
             signIn(email, password, setLoggedUser);
 
         }
 
+        console.log(typeof setLoggedUser, "LRL typeof");
 
 
     }
 
-    if(!register){
+    if (!register) {
         return <>
             <div id={"to_revers"} className={"login_Link_container"}>
-                <LinkRD className={"link link_register"} to={"/rejestracja"} onClick={handleClick} >Załóż
+                <LinkRD className={"link link_register"} to={"/rejestracja"} onClick={handleClick}>Załóż
                     konto</LinkRD>
                 <LinkRD className={"link link_login"} to="/" onClick={handleClick}>Zaloguj
                     się</LinkRD>
-            </div></>
-    }
-    else{
+            </div>
+        </>
+    } else {
         return <>
             <div id={"to_revers"} className={"login_Link_container"}>
                 <LinkRD className={"link link_login"} to="/logowanie" onClick={handleClick}>Zaloguj
                     się</LinkRD>
-                <LinkRD className={"link link_register"} to={"/"} onClick={handleClick} >Załóż
+                <LinkRD className={"link link_register"} to={"/"} onClick={handleClick}>Załóż
                     konto</LinkRD>
-            </div></>
+            </div>
+        </>
     }
-
-
-
-
-
 
 
 }

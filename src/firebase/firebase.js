@@ -26,12 +26,13 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
-export function registerNewUser(email, password){
+export function registerNewUser(email, password, setLoggedUser){
     const auth = getAuth();
     createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             // Signed in
             const user = userCredential.user;
+            setLoggedUser(user.email);
             // ...
         })
         .catch((error) => {
@@ -48,7 +49,6 @@ export function signIn(email, password, setLoggedUser){
         .then((userCredential) => {
             // Signed in
             const user = userCredential.user;
-            console.log("zalogowano poprawnie w firebase");
             setLoggedUser(user.email);
 
 

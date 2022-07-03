@@ -4,12 +4,12 @@ import imageSvg from '../assets/Decoration.svg'
 import {Link as LinkRD} from "react-router-dom";
 
 
-export function MainSection({user}) {
+export function MainSection({user, setLoggedUser}) {
 
     return <>
         <div className={"main_section"} id={"main_section"}>
             <div className={"main_section_container"}>
-                <Header user={user}/>
+                <Header user={user} setLoggedUser={setLoggedUser}/>
                 <div className={"main_section_container_title"}>
                     <h1>Zacznij pomagać!</h1>
                     <h1>Oddaj niechciane rzeczy w zaufane ręce</h1>
