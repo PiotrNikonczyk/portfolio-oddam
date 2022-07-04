@@ -18,7 +18,7 @@ export function AboutUs() {
                 </div>
             </div>
             <div className={"about_us_right"}>
-                <img src={photo} alt={"zdjęcie naszego zespołó"}/>
+
             </div>
         </div>
 

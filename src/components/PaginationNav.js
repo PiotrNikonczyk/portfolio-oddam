@@ -14,7 +14,7 @@ export function PaginationNav({infoPerPage, totalInfo, paginate}) {
                 <ul>
                     {pageNumber.map(number => (
                         <li key={number}>
-                            <a href={"/"} onClick={() => paginate(number)}>{number}</a>
+                            <a onClick={() => paginate(number)}>{number}</a>
                         </li>
                     ))}
                 </ul>
