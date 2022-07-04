@@ -1,15 +1,24 @@
 import React from "react";
 import {Link as LinkRD} from "react-router-dom";
+import { getAuth, signOut } from "firebase/auth";
 
-export function HeaderTopLinks({user, setLoggedUser}) {
+export function HeaderTopLinks({userMail, setLoggedUser}) {
 
     function LogOut(){
         if(typeof  setLoggedUser === "function"){
-            setLoggedUser(null);
+
+
+            const auth = getAuth();
+            signOut(auth).then(() => {
+                // Sign-out successful.
+                setLoggedUser(null);
+            }).catch((error) => {
+                // An error happened.
+            });
         }
     }
 
-    if (!user) {
+    if (!userMail) {
         return <div className={"header_navigation_account"}>
 
             <LinkRD to={"/logowanie"} className={"header_navigation_account_link"}>Zaloguj</LinkRD>
@@ -20,8 +29,8 @@ export function HeaderTopLinks({user, setLoggedUser}) {
     else{
 
         return <div className={"header_navigation_account"}>
-            <p className={"user_hello"}> Cześć {user}</p>
-            <LinkRD to={"/logowanie"} className={"header_navigation_account_link"}>Oddaj rzeczy</LinkRD>
+            <p className={"user_hello"}> Cześć {userMail}</p>
+            <LinkRD to={"/oddaj-rzeczy"} className={"header_navigation_account_link"}>Oddaj rzeczy</LinkRD>
             <LinkRD to={"/wylogowano"} className={"header_navigation_account_link"} onClick={LogOut}>Wyloguj</LinkRD>
 
         </div>
